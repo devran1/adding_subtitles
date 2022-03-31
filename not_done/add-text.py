@@ -17,27 +17,6 @@ args=parser.parse_args()
 
 sentence=args.text
 
-def word_picture(sentence):
-
-    for word in sentence:
-
-        i=alphabet.letters_list.index(f"{word}")
-        #print(i)
-        new_word=alphabet.letters[i]
-
-
-        each_word=alphabet.words(new_word)
-        
-        each_W=np.array(each_word,dtype=np.uint8)
-        #print(each_W) #each word 7x7 place in 360x720
-        
-        #cv2.imshow('white', each_W)
-    return each_W #return means bring it outside
-
-eW = word_picture(sentence) # brings outside with assigned name
-
-#print(eW[0][0])
-
 r,c = 360, 720
 
 
@@ -48,6 +27,68 @@ for i in range(r):
     for j in range(c):
         screen[i][j]=[255,255,255]
 
+#pics=[]
+#print(len(sentence))
+def word_picture(sentence):
+    pics=[]
+    for word in sentence:
+        
+        i=alphabet.letters_list.index(f"{word}")
+        print(i,word)
+        new_word=alphabet.letters[i]
+        each_word=alphabet.words(new_word)
+        each_W=np.array(each_word,dtype=np.uint8)
+        pics += [each_W]
+        #print(each_W) #each word 7x7 place in 360x720
+    #351+7*k 2+7*k len of k 7
+    #adding word
+        
+                #cv2.imshow('white', each_W)
+        #print(names)     
+    #print(len(pics))    
+    
+    """
+    #for a in pics:
+    
+    for a in range(len(pics)):
+        
+        for b in pics[a]:
+            for i in range(7):
+                #print(b[i])
+                pass
+    """                
+      
+        
+       
+                #print(a[i][j]) 
+        
+        
+
+
+
+    """
+    for i in range(7):
+            for j in range(7):
+                for k in range(len(sentence)):
+                    screen[351+i][2 +7*k +j] = each_W[i][j]      
+    """
+    return pics #each_W  #screen #return means bring it outside
+
+
+eW = word_picture(sentence) # brings outside with assigned name
+print(len(eW))
+print(eW)
+#screen_=word_picture(sentence)
+#print(eW[0][0])   
+#wlist=word_picture(sentence)
+
+for k in range(len(eW)):
+    #print(k)
+    for i in range(7):
+        for j in range(7):    
+            screen[351+i][2 +7*k +j] = eW[k][i][j]  
+            pass
+
 #screen_array=np.array(screen,dtype=np.uint8) #need to stay as last
 #cv2.imshow('white', screen_array)
 
@@ -57,22 +98,26 @@ for i in range(r):
 #add a letter like "a"   
 
 
-for i in range(7):
-    for j in range(7):
-        screen[251+i][2+j] = eW[i][j] 
             #pass
 
 
-screen[251][2]=eW[0][0]
+#new thing is add all the letters return all the letters
+#return letters recursively #
+#add letters recursively #?
+
+
+#screen[251][2]=eW[0][0]
 
 """
 [255,,][,,][,,][][][][]
 [255,,][,,][,,]
 """
 
+
+
+
 screen_array=np.array(screen,dtype=np.uint8)
 cv2.imshow('white', screen_array)
 
 cv2.waitKey(0) # waits until a key is pressed
 cv2.destroyAllWindows() # destroys the window showing image
-
