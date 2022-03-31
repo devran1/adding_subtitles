@@ -5,8 +5,6 @@ import numpy as np
 
 import alphabet
 
-#from alphabet import *
-
 
 import argparse
 
@@ -32,8 +30,6 @@ for word in sentence:
     
     #cv2.imshow('white', each_W)
 
-
-#from alphabet import alpha
 
 r,c = 360, 720
 

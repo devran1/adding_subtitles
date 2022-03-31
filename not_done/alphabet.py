@@ -668,45 +668,10 @@ def words(word):
                 word[i][j]=[0,0, 0]
     return word
 
-#new_A=words(A)
-#newA=np.array(new_A,dtype=np.uint8)
-#cv2.imshow('white', newA)
-
-
 
 letters_list=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,0,1,2,3,4,5,6,7,8,9]
 
 letters=[a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,R,Q,S,T,U,V,W,X,Y,Z,0,1,2,3,4,5,6,7,8,9]
 
 
-#letters_list.index("")   
 
-
-"""
-for i in letters_list:
-    #i=letters_list[i]
-    print(i)
-"""
-
-import string 
-#print(string.ascii_letters)
-
-
-
-#dictionary={}
-
-"""
-for i in range(len(letters_list)):
-    print(i,letters_list[i])
-    #dictionary[i]=letters_list[i]
-
-
-
-#print(dictionary) #empty
-
-"""
-"""
-cv2.waitKey(0) # waits until a key is pressed
-cv2.destroyAllWindows() # destroys the window showing image
-
-"""
