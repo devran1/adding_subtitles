@@ -10,7 +10,7 @@ import argparse
 
 
 parser=argparse.ArgumentParser(description="adds text to images")
-parser.add_argument("text",help="add video file to rotate",type=str)
+parser.add_argument("text",help="write for making subtitles",type=str)
 
 args=parser.parse_args()
 
@@ -34,7 +34,7 @@ def word_picture(sentence):
     for word in sentence:
         
         i=alphabet.letters_list.index(f"{word}")
-        print(i,word)
+        #print(i,word)
         new_word=alphabet.letters[i]
         each_word=alphabet.words(new_word)
         each_W=np.array(each_word,dtype=np.uint8)
@@ -76,8 +76,9 @@ def word_picture(sentence):
 
 
 eW = word_picture(sentence) # brings outside with assigned name
-print(len(eW))
-print(eW)
+
+#print(len(eW))
+#print(eW)
 #screen_=word_picture(sentence)
 #print(eW[0][0])   
 #wlist=word_picture(sentence)
