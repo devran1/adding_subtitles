@@ -5,6 +5,7 @@ import numpy as np
 
 import alphabet
 
+#from alphabet import *
 
 
 import argparse
@@ -19,12 +20,18 @@ args=parser.parse_args()
 sentence=args.text
 
 for word in sentence:
-    #print(word)
-    #each_word=alphabet.words(list(word))#not working
-    each_word=alphabet.words(word)
-    print(each_word)
+
+    i=alphabet.letters_list.index(f"{word}")
+    print(i)
+    new_word=alphabet.letters[i]
+
+
+    each_word=alphabet.words(new_word)
+    
     each_W=np.array(each_word,dtype=np.uint8)
-#    cv2.imshow('white', each_W)
+    
+    #cv2.imshow('white', each_W)
+
 
 #from alphabet import alpha
 

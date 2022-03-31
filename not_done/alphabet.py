@@ -656,39 +656,30 @@ Z=[
 [0,0,0,0,0,0,0]    
 ]
 
-#print(type(Z))
 
-
-#letters_list[0]=a
-#type(letters_list)=list
-#type(letters_list[1])=str
 
 def words(word):
 
-#    if word==dictionary.keys:
-
-    if type(word)== str:
-        word = list(word)
-
-
-
-        for i in range(7):
-            for j in range(7):
-                if word[i][j] ==0:
-                    word[i][j]=[255,255,255]
-                else:    
-                    word[i][j]=[0,0, 0,]
+    for i in range(7):
+        for j in range(7):
+            if word[i][j] ==0:
+                word[i][j]=[255,255,255]
+            else:    
+                word[i][j]=[0,0, 0]
     return word
 
 #new_A=words(A)
 #newA=np.array(new_A,dtype=np.uint8)
 #cv2.imshow('white', newA)
 
+
+
 letters_list=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,0,1,2,3,4,5,6,7,8,9]
 
 letters=[a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,R,Q,S,T,U,V,W,X,Y,Z,0,1,2,3,4,5,6,7,8,9]
 
 
+#letters_list.index("")   
 
 
 """
@@ -697,51 +688,25 @@ for i in letters_list:
     print(i)
 """
 
+import string 
+#print(string.ascii_letters)
+
+
+
+#dictionary={}
 
 """
-dictionary={}
-
-dictionary.fromkeys(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z','0','1','2','3','4','5','6','7','8','9'])
-
-
 for i in range(len(letters_list)):
     print(i,letters_list[i])
     #dictionary[i]=letters_list[i]
 
 
 
-print(dictionary) #empty
-"""
+#print(dictionary) #empty
 
 """
-
-letters=[a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,R,Q,S,T,U,V,W,X,Y,Z,0,1,2,3,4,5,6,7,8,9]
-letters_list=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,0,1,2,3,4,5,6,7,8,9]
-
-for _ in letters:
-    for i in range(7):
-        for j in range(7):
-            if _[i][j] ==0:
-                #print("yes")
-                #_[i][j]=np.full((1,1,3), 255)
-                _[i][j]=[255,255,255]
-            
-            else:    
-            #if _[i][j] ==1:
-                _[i][j]=[0,0, 0,]
-
-
-#print(a)
-for _ in letters:
-    #print(_)
-    _ =np.array(_,dtype=np.uint8)
-
-
-
-#a =np.array(a,dtype=np.uint8)
-    #cv2.imshow('white', _)
 """
-
 cv2.waitKey(0) # waits until a key is pressed
 cv2.destroyAllWindows() # destroys the window showing image
 
+"""
