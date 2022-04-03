@@ -11,6 +11,10 @@ def alpha(letter):
 
 
 #7x7
+
+
+
+
 a=[
 [0,0,0,0,0,0,0],
 [0,0,1,1,1,0,0],
@@ -656,39 +660,33 @@ Z=[
 [0,0,0,0,0,0,0]    
 ]
 
+empty=[
+[0,0,0,0,0,0,0],
+[0,0,0,0,0,0,0],
+[0,0,0,0,0,0,0],
+[0,0,0,0,0,0,0],
+[0,0,0,0,0,0,0],
+[0,0,0,0,0,0,0],   
+[0,0,0,0,0,0,0]    
+]
 
 
+def word_coloring(word):
 
-
-letters=[a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,R,Q,S,T,U,V,W,X,Y,Z]
-
-#letters=[a]
-
-
-for _ in letters:
     for i in range(7):
         for j in range(7):
-            if _[i][j] ==0:
-                #print("yes")
-                #_[i][j]=np.full((1,1,3), 255)
-                _[i][j]=[255,255,255]
-            
-            else:    
-            #if _[i][j] ==1:
-                _[i][j]=[0,0, 0,]
-
-              
-#print(a)
-for _ in letters:
-    #print(_)
-    _ =np.array(_,dtype=np.uint8)
+            if word[i][j] ==0:
+                word[i][j]=[255,255,255]
+            if word[i][j] ==1: 
+                word[i][j]=[0,0, 0]
+    return word
 
 
 
-#a =np.array(a,dtype=np.uint8)
-    #cv2.imshow('white', _)
+
+letters_list=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,0,1,2,3,4,5,6,7,8,9]
+
+letters=[a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,R,Q,S,T,U,V,W,X,Y,Z,0,1,2,3,4,5,6,7,8,9]
 
 
-cv2.waitKey(0) # waits until a key is pressed
-cv2.destroyAllWindows() # destroys the window showing image
 
