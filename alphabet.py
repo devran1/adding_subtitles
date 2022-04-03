@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 
 #9x9
-
+#letters as 9x9 matrix for better looking letters increase the size of the matrix and adjust the letters
 
 
 
@@ -878,6 +878,9 @@ empty=[
 [0,0,0,0,0,0,0,0,0]    
 ]
 
+#giving RGB color to 0 and 1
+#zero is white
+#one is black
 
 def word_coloring(word):
 
@@ -890,6 +893,8 @@ def word_coloring(word):
     return word
 
 
+#letters_list for matching every letter in the written text, after that by using matched index value to call the  matrix from letters
+#letters includes the matrix data 
 
 
 letters_list=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","0","1","2","3","4","5","6","7","8","9"]
