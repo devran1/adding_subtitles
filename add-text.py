@@ -88,9 +88,9 @@ eW = word_picture(sentence)
 #print(eW)
 
 for k in range(len(eW)):
-    for i in range(7):
-        for j in range(7):    
-            screen[351+i][2 +7*k +j] = eW[k][i][j]  
+    for i in range(9):
+        for j in range(9):    
+            screen[351+i][2 +9*k +j] = eW[k][i][j]  
             pass
 
 
