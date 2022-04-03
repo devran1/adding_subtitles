@@ -49,7 +49,7 @@ def word_picture(sentence):
             each_W=np.array(each_word,dtype=np.uint8)
             pics += [each_W]
                 
-        else:    
+        else:   
 
             i=alphabet.letters_list.index(f"{word}")
             new_word=alphabet.letters[i]
@@ -59,7 +59,7 @@ def word_picture(sentence):
         #print(i) #new_word, each_W, each_word was black
         #print(pics)
 #    print(pics)
-            print(new_word)#problem is the function word_coloring
+            #print(new_word)#problem is the function word_coloring
     return pics 
 
 #    print(sentence.index(""))
