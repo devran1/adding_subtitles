@@ -26,3 +26,9 @@ python add-text.py -h
 ![](falcon9.jpg)
 
 ![](with-text.png)
+
+_____________________________________________________________
+
+for video
+
+argparse time and  text (time for rigth picture ????)
