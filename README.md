@@ -1,6 +1,14 @@
 # adding_subtitles
 
+```
+pip install -r requirements.txt
+```
+for python3.8 use requirements 
+for python3.7 use python37_req.txt
+
+
 for adding text to images 
+
 ```
 add-text.py [-h] picture [size] [x] [y] text
 
