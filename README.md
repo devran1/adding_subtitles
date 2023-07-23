@@ -29,6 +29,6 @@ python add-text.py -h
 
 _____________________________________________________________
 
-for video
+do the same for videos
 
-argparse time and  text (time for rigth picture ????)
+argparse time and  text (right time for rigth picture ?)
