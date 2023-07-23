@@ -29,6 +29,10 @@ python add-text.py -h
 
 _____________________________________________________________
 
+#### future work
+
 do the same for videos
 
 argparse time and  text (right time for rigth picture ?)
+
+fix the letters, they look terrible, (find a database)
